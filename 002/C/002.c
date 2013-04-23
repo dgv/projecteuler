@@ -4,11 +4,7 @@
 
 int main()
 {
-<<<<<<< HEAD
 	int a, b, c;
-=======
- int a, b, c;
->>>>>>> 0f5ed305be53fd392ca629d2a1c31dead75796b7
 	a = 1;
 	b = 1;
 	c = 0;
@@ -23,8 +19,4 @@ int main()
 			printf("%d \n", c);	
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0f5ed305be53fd392ca629d2a1c31dead75796b7
