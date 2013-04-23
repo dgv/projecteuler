@@ -1,16 +1,22 @@
 #include <stdio.h>
- 
+
+// 1 1 [2] 3 5 [8] 13 21 [34] 55 89 [144] 233 377 [610] ...
+
 int main()
 {
-        int x, y;
-        x = 1;
-        y = 0;
-        x = x + y;
-        y = x + x;
-        printf ("%d %d\n", x, y );
-        while (( x <= 4000000 ) && (y <= 4000000)) {
-                x = x + y;
-                y = x + y;
-                printf( "%d %d\n", x, y);
-        }
+	int a, b, c;
+	a = 1;
+	b = 1;
+	c = 0;
+	c = a + b;
+
+	while (c <= 4000000) {
+		a = c + b;
+		b = a + c;
+		c = a + b;
+
+		if (c < 4000000) {
+			printf("%d \n", c);	
+		}
+	}
 }
