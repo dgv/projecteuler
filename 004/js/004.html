@@ -1,0 +1,25 @@
+<html>
+	<script>
+	var a,b,c,d,palindrome_found,n;
+	d = 0;
+	for(a = 100; a < 1000; a++){
+		for(b = a; b < 1000; b++){
+			n = a * b;
+			c = 0;
+			palindrome_found = false;
+			for (var i=0; i<~~(n.toString().length/2); i++){
+				if (n.toString()[0+i]===n.toString()[(n.toString().length)-(1+i)]){
+					c++;
+					if (c==~~(n.toString().length/2)){
+						palindrome_found = true;
+					}
+				}
+			}
+			if (palindrome_found && (n > d)){
+				d = n;
+			}
+		}
+	}
+	document.write("The largest palindrome is <b>"+d+"</b>");
+	</script>
+</html>
