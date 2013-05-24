@@ -1,0 +1,29 @@
+<html>
+	<script>
+		var primes = [2, 3, 5, 7];
+		var count, n, remainders, sum, p;
+		count = primes.length;
+		sum = 17;
+		n = primes[3]+1;
+		p = primes[3]; 
+    		while (p < 2000000) {
+			remainders = 0;
+			for (var i = 0; i < primes.length; i++) {
+				if ((n % primes[i])==0) { 
+					continue; 
+				} else { 
+					remainders++; 
+				}
+				if  (remainders == primes.length) {
+					count++;
+					primes.push(n);
+					sum = sum+n;
+					p = n;
+					break;
+				}
+			}
+			n++; 
+		}
+		document.write("The sum of all the primes below two million is <b>" + (sum-n) + "</b>");
+	</script>
+</html>
