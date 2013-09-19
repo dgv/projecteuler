@@ -1,0 +1,29 @@
+<html>
+	<script>
+		//full brute-force
+		var i = 0;
+		var j = 0;
+		var k = 0;
+		var l = 0;
+		var d = [];
+	    	while (d.length <= 500) {
+			i++;
+			i = i + j;
+			j++;
+			document.write(i+"<br>")
+			d = [];
+			k = 1;
+			l = 0;
+			while (k <= i) {
+				if (i % k == 0) {
+				  d[l] = k;
+				  l++;
+				}
+				k++;
+			}
+			document.write("triangle: "+d+"<br>");
+		}
+
+		document.write("The the value of the first triangle number to have over five hundred divisors is "+i);
+	</script>
+</html>
