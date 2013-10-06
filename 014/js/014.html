@@ -1,0 +1,30 @@
+<html>
+	<script>
+	var i = 0;
+	var n = 0;
+	var c = 0;
+	function seq(n) {
+		a.push(n);
+		if (n > 1){
+			if (Math.floor(n % 2) > 0) {
+				n= 3*n+1;
+				return seq(n);
+			} else {
+				n=  Math.floor(n/2);
+				return seq(n);
+			}
+			return n;
+		}
+	}
+	while (i<1000000) {
+		var a = []
+		seq(i)
+		if (a.length > c) {
+			c= a.length;
+			n=i;
+		}
+		i++;
+	}
+	document.write("The number which starting number, under one million, that produces the longest chain is "+n);
+	</script>
+</html>
