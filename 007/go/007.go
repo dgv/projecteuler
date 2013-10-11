@@ -1,23 +1,18 @@
-// run in http://go-vim.appspot.com/p/GGOUgvCfAJ
+// run in http://go-vim.appspot.com/p/85ZKkklUl3
 package main
 
 import "fmt"
 
 func main() {
 	var primes = []int{2, 3, 5, 7, 11, 13}
-	count := len(primes)
-	n := primes[5] + 1
-	for count < 10001 {
-		remainders := 0
+	n := 14
+	for len(primes) <= 10001 {
 		for i := 0; i < len(primes); i++ {
-			if (n % primes[i]) == 0 {
-				continue
-			} else {
-				remainders++
-			}
-			if remainders == len(primes) {
-				count++
+			if (primes[i] * primes[i]) > n {
 				primes = append(primes, n)
+				break
+			}
+			if (n % primes[i]) == 0 {
 				break
 			}
 		}
