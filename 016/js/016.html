@@ -1,0 +1,11 @@
+<html>
+	<script type="text/javascript" src="https://raw.github.com/pistaches/project_euler/master/util/biginteger.js"></script>
+	<script>
+	  var x = BigInteger(2).pow(1000).toString();
+	  var n = 0;
+	  for (var i=0;i<x.length;i++){
+		n += parseInt(x[i]);
+	  }
+	  document.write("The sum of the digits of the number 2^1000 is "+n);
+	</script>
+</html>
