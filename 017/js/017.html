@@ -1,0 +1,64 @@
+<html>
+	<script>
+	var numnames = new Array();
+	numnames[1] = "one";
+    numnames[2] = "two";
+    numnames[3] = "three";
+    numnames[4] = "four";
+    numnames[5] = "five";
+    numnames[6] = "six";
+    numnames[7] = "seven";
+    numnames[8] = "eight";
+    numnames[9] = "nine";
+    numnames[10] = "ten";
+    numnames[11] = "eleven";
+    numnames[12] = "twelve";
+    numnames[13] = "thirteen";
+    numnames[14] = "fourteen";
+    numnames[15] = "fifteen";
+    numnames[16] = "sixteen";
+    numnames[17] = "seventeen";
+    numnames[18] = "eighteen";
+    numnames[19] = "nineteen";
+    numnames[20] = "twenty";
+    numnames[30] = "thirty";
+    numnames[40] = "forty";
+    numnames[50] = "fifty";
+    numnames[60] = "sixty";
+    numnames[70] = "seventy";
+    numnames[80] = "eighty";
+    numnames[90] = "ninety";
+    numnames[100] = "hundred";
+    numnames[1000] = "thousand";
+
+function spell(n){ 
+    if (n<21 || (n%10==0 && n<100)) {
+        return numnames[n].length;
+    }	
+    var s = n.toString();
+    if (s.length == 2) {
+        var d = parseInt(s[0]+"0");
+        var u = parseInt(s[1]);
+        return numnames[d].length+numnames[u].length;
+    }
+    if (s.length == 3) {
+        var h = parseInt(s[0]);
+        var t = parseInt(s[1]+s[2]);
+		if (t == 0) {
+            return numnames[h].length+"hundred".length;
+		} else {
+			return numnames[h].length+"hundredand".length+spell(t);
+		}
+    }
+    return "onethousand".length;
+}
+                            
+    var i = 1;
+    var c = 0;
+    while (i<1001){
+		c += spell(i);
+		i++;
+    }
+    document.write("Were used "+c+" letters to count 1-1000");
+	</script>
+</html>
