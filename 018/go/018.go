@@ -1,3 +1,4 @@
+// run in http://go-vim.appspot.com/p/CMgiNwZCiX
 package main
 
 import (

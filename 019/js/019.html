@@ -1,0 +1,77 @@
+<html>
+	<script>
+	var y = 100
+	var d = 1 // week:0-7 sun:0 
+	var c = 0
+	while (y > 0) {
+		//jan
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//feb
+		if (y%4 == 0) {
+			d = (29 + d) % 7
+			if (d == 0) {
+				c++;
+			}
+		} else {
+			if (d == 0) {
+				c++;
+			}
+		}       
+		//mar
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}      
+		//apr
+		d = (30 + d) % 7 
+		if (d == 0) {
+			c++;
+		}
+		//may
+		d = (31 + d) % 7 
+		if (d == 0) {
+			c++;
+		}
+		//jun
+		d = (30 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//jul
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//aug
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//set
+		d = (30 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//out
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//nov
+		d = (30 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		//dec
+		d = (31 + d) % 7
+		if (d == 0) {
+			c++;
+		}
+		y--;
+	}
+	document.write("There's "+c+" sundays at first of month, between 1 Jan 1901 and 31 Dec 2000");
+	</script>
+</html>
