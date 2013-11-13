@@ -5,7 +5,7 @@ import "fmt"
 
 func main() {
 	y := 100
-	d := 1 // week:0-7 sun:0
+	d := 1 // week:0-6 sun:0
 	c := 0
 	for y > 0 {
 		//jan

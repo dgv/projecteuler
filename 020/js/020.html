@@ -1,0 +1,17 @@
+<html>
+        <script type="text/javascript" src="https://raw.github.com/pistaches/project_euler/master/util/biginteger.js"></script>
+        <script>
+          function fact(num){
+            if (num === 0)
+              return BigInteger(1);
+            else
+              return BigInteger(num).multiply(fact(num-1));
+          }
+	  var sum = 0;
+          var n = BigInteger(fact(100)).toString();
+	  for (var i=0;i<n.length;i++){
+                sum += parseInt(n[i]);
+          }
+          document.write("The sum of the digits in the number 100! is "+sum);
+        </script>
+</html>
