@@ -1,0 +1,33 @@
+<html>
+	<script>
+	function sum(numbers) {
+		var s = 0;
+		for (var i= 0; i < numbers.length; i++) {
+			s += numbers[i];
+		}
+		return s;
+	}
+
+	function divs(n) {
+		var numbers = [];
+		for (var i = 1; i < n; i++) {
+			if (n%i == 0) {
+				numbers[numbers.length] = i;
+			}
+		}
+		return numbers;
+	}
+
+	nums = [];
+	for (var i= 1; i < 10000; i++) {
+		var s = sum(divs(i));
+		var d = sum(divs(s));
+		if (d == i) {
+			if (i != s) {
+				nums[nums.length] = d;
+			}
+		}
+	}
+	document.write("The sum of all the amicable numbers under 10000 is " + sum(nums))
+	</script>
+</html>
